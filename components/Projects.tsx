@@ -115,7 +115,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               repeatType: 'reverse',
             }}
           />
-                          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center">
             <motion.div
               className="text-white text-6xl font-bold opacity-20"
               animate={{
