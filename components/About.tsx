@@ -212,73 +212,142 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
+          className="mt-20"
         >
-          <h3 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-gray-200">
-            Skills & Technologies
-          </h3>
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.div
+              className="inline-flex items-center gap-2 mb-4"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <Sparkles className="text-blue-600 dark:text-blue-400" size={24} />
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Skills & Technologies
+              </h3>
+              <Sparkles className="text-purple-600 dark:text-purple-400" size={24} />
+            </motion.div>
+            <motion.div
+              className="w-32 h-1.5 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 mx-auto mb-6 rounded-full"
+              initial={{ width: 0 }}
+              whileInView={{ width: 128 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+            />
+            <motion.p
+              className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              A comprehensive overview of my technical expertise and proficiency levels
+            </motion.p>
+          </motion.div>
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {skills.map((skill, index) => {
               const Icon = skill.icon;
               const skillRef = useRef(null);
-              const skillInView = useInView(skillRef, { once: true });
+              const skillInView = useInView(skillRef, { once: true, amount: 0.3 });
 
               return (
                 <motion.div
                   key={skill.category}
                   ref={skillRef}
-                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ y: -10, scale: 1.05 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ 
+                    duration: 0.5, 
+                    delay: index * 0.08,
+                    ease: 'easeOut'
+                  }}
+                  whileHover={{ y: -4 }}
                   className="group relative"
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-r ${skill.color} rounded-xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-300`} />
-                  <div className="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 dark:border-gray-700/50">
-                    <motion.div
-                      className={`w-14 h-14 rounded-xl bg-gradient-to-r ${skill.color} flex items-center justify-center mb-4 shadow-lg`}
-                      whileHover={{ rotate: [0, -10, 10, -10, 0] }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <Icon className="text-white" size={28} />
-                    </motion.div>
-                    <h4 className="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-200">{skill.category}</h4>
+                  {/* Subtle Glow Effect */}
+                  <div className={`absolute -inset-0.5 bg-gradient-to-r ${skill.color} rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300`} />
+                  
+                  {/* Card Container */}
+                  <div className="relative bg-white dark:bg-gray-800/95 backdrop-blur-xl p-7 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-200/50 dark:border-gray-700/50 group-hover:border-transparent overflow-hidden">
+                    {/* Subtle gradient overlay */}
+                    <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${skill.color} opacity-5 rounded-full blur-2xl group-hover:opacity-10 transition-opacity duration-500`} />
                     
-                    {/* Progress Bar */}
-                    <div className="mb-4">
-                      <div className="flex justify-between text-xs text-gray-600 dark:text-gray-400 mb-1">
-                        <span>Proficiency</span>
-                        <span>{skill.progress}%</span>
+                    {/* Icon Container */}
+                    <motion.div
+                      className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${skill.color} flex items-center justify-center mb-5 shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Icon className="text-white" size={30} />
+                    </motion.div>
+
+                    {/* Category Title */}
+                    <h4 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-100 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
+                      {skill.category}
+                    </h4>
+                    
+                    {/* Enhanced Progress Bar */}
+                    <div className="mb-5">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                          Proficiency
+                        </span>
+                        <motion.span
+                          className="text-sm font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+                          initial={{ opacity: 0 }}
+                          animate={skillInView ? { opacity: 1 } : {}}
+                          transition={{ delay: index * 0.1 + 0.5 }}
+                        >
+                          {skill.progress}%
+                        </motion.span>
                       </div>
-                      <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                      <div className="w-full h-2.5 bg-gray-100 dark:bg-gray-700/50 rounded-full overflow-hidden shadow-inner">
                         <motion.div
                           className={`h-full bg-gradient-to-r ${skill.color} rounded-full`}
                           initial={{ width: 0 }}
                           animate={skillInView ? { width: `${skill.progress}%` } : {}}
-                          transition={{ duration: 1, delay: index * 0.1 + 0.3 }}
+                          transition={{ 
+                            duration: 0.8, 
+                            delay: index * 0.1 + 0.2,
+                            ease: 'easeOut'
+                          }}
                         />
                       </div>
                     </div>
 
-                    <ul className="space-y-2">
-                      {skill.technologies.map((tech, techIdx) => (
-                        <motion.li
-                          key={tech}
-                          className="text-sm text-gray-600 dark:text-gray-300 flex items-center gap-2"
-                          initial={{ opacity: 0, x: -10 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: index * 0.1 + techIdx * 0.05 }}
-                        >
+                    {/* Technologies List */}
+                    <div className="space-y-2.5">
+                      <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
+                        Technologies
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {skill.technologies.map((tech, techIdx) => (
                           <motion.span
-                            className={`w-2 h-2 bg-gradient-to-r ${skill.color} rounded-full`}
-                            animate={{ scale: [1, 1.3, 1] }}
-                            transition={{ duration: 2, repeat: Infinity, delay: techIdx * 0.2 }}
-                          />
-                          {tech}
-                        </motion.li>
-                      ))}
-                    </ul>
+                            key={tech}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ 
+                              delay: index * 0.1 + techIdx * 0.03 + 0.3,
+                              duration: 0.2
+                            }}
+                            whileHover={{ scale: 1.05 }}
+                            className={`px-3 py-1.5 text-xs font-medium rounded-lg bg-gradient-to-r ${skill.color} bg-opacity-10 dark:bg-opacity-20 text-gray-700 dark:text-gray-300 border border-transparent hover:border-opacity-30 hover:shadow-sm transition-all duration-200 cursor-default`}
+                          >
+                            {tech}
+                          </motion.span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               );
