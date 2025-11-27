@@ -8,30 +8,30 @@ const skills = [
   {
     category: 'Frontend',
     icon: Globe,
-    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Material UI', 'Shadcn UI'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'ShadCN', 'Material UI', 'Bootstrap'],
     color: 'from-blue-500 to-cyan-500',
     progress: 95,
   },
   {
     category: 'Backend',
     icon: Database,
-    technologies: ['NestJS', 'Node.js', 'GraphQL', 'REST APIs'],
+    technologies: ['NestJS', 'Node.js', 'Express'],
     color: 'from-purple-500 to-pink-500',
     progress: 75,
   },
   {
     category: 'Database',
     icon: Database,
-    technologies: ['PostgreSQL', 'MongoDB', 'Prisma'],
+    technologies: ['PostgreSQL', 'MongoDB'],
     color: 'from-green-500 to-emerald-500',
     progress: 80,
   },
   {
-    category: 'Tools & Others',
+    category: 'Mobile & Tools',
     icon: Zap,
-    technologies: ['Git', 'Docker', 'AWS', 'CI/CD'],
+    technologies: ['React Native', 'Git', 'React Query'],
     color: 'from-orange-500 to-red-500',
-    progress: 85,
+    progress: 80,
   },
 ];
 
@@ -117,7 +117,7 @@ export default function About() {
             >
               6 months
             </motion.span>{' '}
-            of hands-on experience in Backend Development. Passionate about building clean, efficient, and visually engaging user experiences.
+            of hands-on experience in Backend Development. Specialized in building scalable web applications using React, Next.js, and NestJS, with expertise in creating responsive interfaces and integrating complex APIs. Also have experience in React Native for mobile app development.
           </motion.p>
         </motion.div>
 

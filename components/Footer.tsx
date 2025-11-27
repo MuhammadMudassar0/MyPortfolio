@@ -36,7 +36,7 @@ export default function Footer() {
               Portfolio
             </h3>
             <p className="text-gray-400">
-              Software Engineer passionate about building clean, efficient, and visually engaging user experiences.
+              Software Engineer with 2.5+ years of frontend experience, specializing in React, Next.js, and modern web technologies. Building scalable applications with clean code and seamless user experiences.
             </p>
           </motion.div>
 

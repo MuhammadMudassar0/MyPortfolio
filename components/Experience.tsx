@@ -15,37 +15,49 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     title: 'Frontend Developer',
-    company: 'Tech Company',
-    period: '2022 - Present',
-    description: [
-      'Developed and maintained responsive web applications using React and Next.js',
-      'Collaborated with cross-functional teams to deliver high-quality products',
-      'Implemented modern UI/UX designs with Tailwind CSS and Material UI',
-      'Optimized application performance and improved user experience',
-    ],
-    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Material UI'],
-  },
-  {
-    title: 'Junior Frontend Developer',
-    company: 'Startup Inc.',
-    period: '2021 - 2022',
-    description: [
-      'Built reusable components and maintained code quality standards',
-      'Participated in code reviews and agile development processes',
-      'Worked on improving application accessibility and SEO',
-    ],
-    technologies: ['React', 'JavaScript', 'CSS', 'HTML'],
-  },
-  {
-    title: 'Backend Developer (Part-time)',
-    company: 'Freelance',
+    company: 'Datawire AI',
     period: '2024 - Present',
     description: [
-      'Developed RESTful and GraphQL APIs using NestJS',
-      'Designed and implemented database schemas with PostgreSQL',
-      'Integrated third-party services and payment gateways',
+      'Integrating APIs on the frontend and collaborating with design and backend teams to ensure seamless functionality',
+      'Building responsive and performant user interfaces using React.js and Next.js',
+      'Working with modern UI libraries including ShadCN and Tailwind CSS for consistent design',
+      'Implementing data fetching and state management using React Query',
     ],
-    technologies: ['NestJS', 'PostgreSQL', 'GraphQL', 'Node.js'],
+    technologies: ['React.js', 'Next.js', 'JavaScript', 'TypeScript', 'ShadCN', 'Tailwind CSS', 'React Query'],
+  },
+  {
+    title: 'Senior Software Engineer',
+    company: 'HandT Tech Solution',
+    period: '2024 - 2025',
+    description: [
+      'Worked on multiple projects, contributing to both frontend and full-stack development',
+      'Developed an Attendance Management System using React.js and Node.js, handling both frontend and backend functionalities',
+      'Integrated ChatGPT APIs, implementing real-time streaming responses on the frontend',
+      'Built the Advisor app frontend using Next.js and Tailwind CSS, including authentication system and complete user flow for file processing',
+    ],
+    technologies: ['React.js', 'Next.js', 'Bootstrap', 'Tailwind CSS', 'Material UI', 'Node.js'],
+  },
+  {
+    title: 'Software Engineer',
+    company: 'Vivamos Spanish',
+    period: '2023 - 2024',
+    description: [
+      'Contributed to the development team, actively participating in planning new module additions and maintaining existing features',
+      'Collaborated on feature enhancements, ensuring scalability, performance, and seamless user experience',
+      'Worked with React.js and Material UI to build modern and responsive interfaces',
+    ],
+    technologies: ['React.js', 'Material UI', 'JavaScript'],
+  },
+  {
+    title: 'Software Engineer',
+    company: 'TechG4',
+    period: '2022 - 2023',
+    description: [
+      'Started professional career focusing on frontend development before transitioning to backend development with Node.js',
+      'Worked on multiple client projects, contributing to robust and scalable full-stack solutions',
+      'Developed core features for Modern Mirror, a client project integrating React-based dashboard with Python backend, enabling users to virtually try on dresses using 3D models',
+    ],
+    technologies: ['React.js', 'Node.js', 'Python', 'JavaScript'],
   },
 ];
 

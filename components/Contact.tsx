@@ -6,10 +6,7 @@ import { useRef } from 'react';
 import { Mail, Send, Linkedin, Github, Twitter, Sparkles, MessageSquare } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Github, href: '#', label: 'GitHub', color: 'from-gray-700 to-gray-900' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn', color: 'from-blue-600 to-blue-800' },
-  { icon: Twitter, href: '#', label: 'Twitter', color: 'from-cyan-500 to-blue-500' },
-  { icon: Mail, href: 'mailto:your.email@example.com', label: 'Email', color: 'from-pink-500 to-rose-500' },
+  { icon: Mail, href: 'mailto:iammudassarnaveed1@gmail.com', label: 'Email', color: 'from-pink-500 to-rose-500' },
 ];
 
 export default function Contact() {
@@ -271,10 +268,10 @@ export default function Contact() {
                     <div>
                       <p className="font-semibold text-gray-800 dark:text-gray-200">Email</p>
                       <a
-                        href="mailto:your.email@example.com"
+                        href="mailto:iammudassarnaveed1@gmail.com"
                         className="text-blue-600 dark:text-blue-400 hover:underline"
                       >
-                        your.email@example.com
+                        iammudassarnaveed1@gmail.com
                       </a>
                     </div>
                   </motion.div>

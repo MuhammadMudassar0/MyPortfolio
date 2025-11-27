@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Software Engineer Portfolio | Frontend & Backend Developer",
-  description: "Software Engineer with 2.5+ years of Frontend Development experience and 6 months of Backend Development. Passionate about building clean, efficient, and visually engaging user experiences.",
-  keywords: ["Software Engineer", "Frontend Developer", "Backend Developer", "React", "Next.js", "NestJS", "Portfolio"],
-  authors: [{ name: "Your Name" }],
+  title: "Mudassar Naveed | Software Engineer Portfolio | Frontend & Backend Developer",
+  description: "Software Engineer with 2.5+ years of Frontend Development experience and 6 months of Backend Development. Specialized in React, Next.js, NestJS, and building scalable web applications.",
+  keywords: ["Mudassar Naveed", "Software Engineer", "Frontend Developer", "Backend Developer", "React", "Next.js", "NestJS", "TypeScript", "Portfolio"],
+  authors: [{ name: "Mudassar Naveed" }],
   openGraph: {
-    title: "Software Engineer Portfolio",
+    title: "Mudassar Naveed - Software Engineer Portfolio",
     description: "Software Engineer with expertise in Frontend and Backend Development",
     type: "website",
   },
